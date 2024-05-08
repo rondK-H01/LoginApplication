@@ -38,6 +38,8 @@
             linkLabel1 = new LinkLabel();
             pictureBox1 = new PictureBox();
             lblPass = new Label();
+            label1 = new Label();
+            txtEmail = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -49,7 +51,7 @@
             btnLogin.Location = new Point(259, 248);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(115, 43);
-            btnLogin.TabIndex = 3;
+            btnLogin.TabIndex = 4;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
@@ -62,7 +64,7 @@
             btnCancel.Location = new Point(408, 248);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(115, 43);
-            btnCancel.TabIndex = 4;
+            btnCancel.TabIndex = 5;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = false;
             btnCancel.Click += btnCancel_Click;
@@ -72,7 +74,7 @@
             lblUser.AutoSize = true;
             lblUser.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblUser.ForeColor = Color.Coral;
-            lblUser.Location = new Point(259, 89);
+            lblUser.Location = new Point(255, 94);
             lblUser.Name = "lblUser";
             lblUser.Size = new Size(101, 25);
             lblUser.TabIndex = 1;
@@ -80,18 +82,18 @@
             // 
             // txtUser
             // 
-            txtUser.Location = new Point(370, 89);
+            txtUser.Location = new Point(370, 94);
             txtUser.Name = "txtUser";
             txtUser.Size = new Size(138, 23);
-            txtUser.TabIndex = 0;
+            txtUser.TabIndex = 1;
             // 
             // txtPass
             // 
-            txtPass.Location = new Point(370, 131);
+            txtPass.Location = new Point(370, 136);
             txtPass.Name = "txtPass";
             txtPass.PasswordChar = '*';
             txtPass.Size = new Size(138, 23);
-            txtPass.TabIndex = 1;
+            txtPass.TabIndex = 2;
             // 
             // chkShowPass
             // 
@@ -100,7 +102,7 @@
             chkShowPass.Location = new Point(370, 197);
             chkShowPass.Name = "chkShowPass";
             chkShowPass.Size = new Size(138, 25);
-            chkShowPass.TabIndex = 2;
+            chkShowPass.TabIndex = 3;
             chkShowPass.Text = "Show Password";
             chkShowPass.UseVisualStyleBackColor = true;
             chkShowPass.CheckedChanged += chkShowPass_CheckedChanged;
@@ -112,7 +114,7 @@
             linkLabel1.Location = new Point(448, 302);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(100, 15);
-            linkLabel1.TabIndex = 5;
+            linkLabel1.TabIndex = 6;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Forgot Password?";
             // 
@@ -134,11 +136,30 @@
             lblPass.AutoSize = true;
             lblPass.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblPass.ForeColor = Color.Coral;
-            lblPass.Location = new Point(259, 131);
+            lblPass.Location = new Point(255, 136);
             lblPass.Name = "lblPass";
             lblPass.Size = new Size(97, 25);
             lblPass.TabIndex = 1;
             lblPass.Text = "Password";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Coral;
+            label1.Location = new Point(259, 52);
+            label1.Name = "label1";
+            label1.Size = new Size(59, 25);
+            label1.TabIndex = 1;
+            label1.Text = "Email";
+            // 
+            // txtEmail
+            // 
+            txtEmail.Location = new Point(370, 52);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(138, 23);
+            txtEmail.TabIndex = 0;
+            txtEmail.TextChanged += textBox1_TextChanged;
             // 
             // Form1
             // 
@@ -149,8 +170,10 @@
             Controls.Add(pictureBox1);
             Controls.Add(linkLabel1);
             Controls.Add(chkShowPass);
+            Controls.Add(txtEmail);
             Controls.Add(txtPass);
             Controls.Add(txtUser);
+            Controls.Add(label1);
             Controls.Add(lblPass);
             Controls.Add(lblUser);
             Controls.Add(btnCancel);
@@ -173,5 +196,7 @@
         private LinkLabel linkLabel1;
         private PictureBox pictureBox1;
         private Label lblPass;
+        private Label label1;
+        private TextBox txtEmail;
     }
 }

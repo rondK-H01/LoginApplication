@@ -13,8 +13,9 @@ namespace LoginApplication
         {
             SqlConnection con = new SqlConnection("Data Source=DESKTOP-GFTTK8N;Initial Catalog=Loginapp;Integrated Security=True;Pooling=False;Encrypt=True;TrustServerCertificate=True");
             con.Open();
-            string query = "SELECT COUNT(*) FROM loginapp WHERE username=@username AND password=@password";
+            string query = "SELECT COUNT(*) FROM loginapp WHERE email=@email AND username=@username AND password=@password";
             SqlCommand cmd = new SqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@email", txtEmail.Text);
             cmd.Parameters.AddWithValue("@username", txtUser.Text);
             cmd.Parameters.AddWithValue("@password", txtPass.Text);
 
@@ -40,6 +41,11 @@ namespace LoginApplication
         private void chkShowPass_CheckedChanged(object sender, EventArgs e)
         {
             txtPass.PasswordChar = chkShowPass.Checked ? '\0' : '*';
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
